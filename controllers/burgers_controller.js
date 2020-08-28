@@ -8,13 +8,13 @@ router.get('/burgers', (req, res) => {
 })
 
 router.post('/burgers', (req, res) => {
-    burger.insertOne(req.body, data => {
+    burger.insert(req.body, data => {
         res.json(data)
     })
 })
 
-router.put('/burgers', (req, res) => {
-    burger.updateOne(req.body, { id: req.params.id }, () => {
+router.put('/burgers/:id', (req, res) => {
+    burger.update(req.body, { id: req.params.id }, () => {
         res.sendStatus(200)
     })
 })

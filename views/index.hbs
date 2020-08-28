@@ -1,25 +1,27 @@
-<h1>Burger Hitlist</h1>
+<div class="col-md-6">
+    <h2>Burgers to be Hit</h2>
 
-<ul id="notDevoured">
-    <h2>Burgers to be hit</h2>
-    {{#each burgers}}
-    {{#unless this.devoured}}
-    <li>
-        {{this.burger_name}}
-    </li>
-    {{/each}}
-    {{/unless}}
-</ul>
+    <ul id="notDevoured" class="list-group">
+        {{#each burgers}}
+        {{#unless this.devoured}}
+        <li data-name="{{ this.burger_name }}" data-id="{{ this.id }}" class="list-group-item">
+            {{ this.burger_name }}
+        </li>
+        {{/unless}}
+        {{/each}}
+    </ul>
+</div>
 
-<hr>
-
-<ul id="devoured">
+<div class="col-md-6">
     <h2>Burgers Devoured</h2>
-    {{#each burgers}}
-    {{#if this.devoured}}
-    <li>
-        {{this.burger_name}}
-    </li>
-    {{/each}}
-    {{/if}}
-</ul>
+
+    <ul id="devoured" class="list-group">
+        {{#each burgers}}
+        {{#if this.devoured}}
+        <li data-name="{{ this.burger_name }}" data-id="{{ this.id }}" class="list-group-item">
+            {{ this.burger_name }}
+        </li>
+        {{/if}}
+        {{/each}}
+    </ul>
+</div>
