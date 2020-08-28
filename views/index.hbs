@@ -1,0 +1,25 @@
+<h1>Burger Hitlist</h1>
+
+<ul id="notDevoured">
+    <h2>Burgers to be hit</h2>
+    {{#each burgers}}
+    {{#unless this.devoured}}
+    <li>
+        {{this.burger_name}}
+    </li>
+    {{/each}}
+    {{/unless}}
+</ul>
+
+<hr>
+
+<ul id="devoured">
+    <h2>Burgers Devoured</h2>
+    {{#each burgers}}
+    {{#if this.devoured}}
+    <li>
+        {{this.burger_name}}
+    </li>
+    {{/each}}
+    {{/if}}
+</ul>

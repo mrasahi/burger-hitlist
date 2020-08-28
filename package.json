@@ -1,0 +1,25 @@
+{
+  "name": "burger-hitlist",
+  "version": "1.0.0",
+  "description": "Homework13 - Makoto Asahi",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrasahi/burger-hitlist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrasahi/burger-hitlist/issues"
+  },
+  "homepage": "https://github.com/mrasahi/burger-hitlist#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql2": "^2.1.0"
+  }
+}
